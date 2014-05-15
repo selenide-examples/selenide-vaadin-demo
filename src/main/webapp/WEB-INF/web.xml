@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+<web-app>
+  <servlet>
+    <servlet-name>Hello World Application</servlet-name>
+    <servlet-class>org.selenide.MyVaadinUI$MyServlet</servlet-class>
+    <!--<init-param>-->
+    <!--<param-name>application</param-name>-->
+    <!--<param-value>org.selenide.MyVaadinUI</param-value>-->
+    <!--</init-param>-->
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Hello World Application</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+</web-app>
