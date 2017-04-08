@@ -1,5 +1,6 @@
 package ui;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.After;
 import org.junit.Before;
@@ -16,6 +17,7 @@ public class AddressBookTest {
 
   @Before
   public void setUp() {
+    Configuration.browser = "chrome";
     open("http://demo.vaadin.com/AddressBook/");
   }
 
