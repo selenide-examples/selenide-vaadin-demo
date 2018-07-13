@@ -2,11 +2,10 @@ package ui;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.codeborne.selenide.CollectionCondition.size;
+import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.appears;
 import static com.codeborne.selenide.Condition.visible;
@@ -14,10 +13,10 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class AddressBookTest {
-
   @Before
   public void setUp() {
-    Configuration.browser = "chrome";
+    Configuration.startMaximized = false;
+    Configuration.reportsFolder = "target/surefire-reports";
     open("http://demo.vaadin.com/AddressBook/");
   }
 
@@ -28,7 +27,7 @@ public class AddressBookTest {
         texts("First name", "Last name", "Email", "Phone number", "Street Address", "Postal Code", "City")
     );
 
-    table.findAll(".v-table-table .v-table-row").shouldHave(size(13));
+    table.findAll(".v-table-table .v-table-row").shouldHave(sizeGreaterThan(10));
     
     table.find(".v-table-table .v-table-row", 0).findAll(".v-table-cell-content").shouldHave(
         texts("Lisa", "Schneider", "lisa.schneider@vaadin.com", "+358 02 555 7531", "561-9262 Iaculis Avenue", "69761", "Stockholm")

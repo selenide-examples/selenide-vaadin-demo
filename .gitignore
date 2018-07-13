@@ -1,5 +1,5 @@
 /*.iml
 /*.ipr
 /*.iws
-/build
+/target
 /src/main/webapp/VAADIN/widgetsets
