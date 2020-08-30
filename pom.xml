@@ -24,6 +24,7 @@
         <configuration>
           <systemPropertyVariables>
             <selenide.headless>true</selenide.headless>
+            <selenide.downloadsFolder>target/downloads</selenide.downloadsFolder>
           </systemPropertyVariables>
         </configuration>
       </plugin>
@@ -33,7 +34,7 @@
     <dependency>
       <groupId>com.codeborne</groupId>
       <artifactId>selenide</artifactId>
-      <version>5.14.0</version>
+      <version>5.14.2</version>
       <scope>test</scope>
     </dependency>
     <dependency>
