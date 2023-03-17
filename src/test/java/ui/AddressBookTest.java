@@ -7,15 +7,14 @@ import org.junit.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.CollectionCondition.texts;
-import static com.codeborne.selenide.Condition.appears;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class AddressBookTest {
   @Before
   public void setUp() {
-    Configuration.startMaximized = false;
     Configuration.reportsFolder = "target/surefire-reports";
     open("http://demo.vaadin.com/AddressBook/");
   }
